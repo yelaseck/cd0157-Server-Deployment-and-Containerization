@@ -68,6 +68,10 @@ def auth():
     Create JWT token based on email.
     """
     request_data = request.get_json()
+    print("______________________________")
+    print(request_data)
+    print(request.args)
+    print("_______________________________")
     email = request_data.get('email')
     password = request_data.get('password')
     if not email:
